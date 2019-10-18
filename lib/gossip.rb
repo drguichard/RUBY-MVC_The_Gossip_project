@@ -11,17 +11,26 @@ class Gossip
   end
 
   def save
-      file = File.expand_path('../../db/gossip.csv', __FILE__)
-      CSV.open(file, "a+") do |new_row|
-          new_row << [@author, @content]
-      end
-      #ou avec JSON : def save_gossip
-      #File.open("gossip.json","a+") do |f|
-      #      f.write(@gossip_array.to_json)
-      #end
-
+    file = File.expand_path('../../db/gossip.csv', __FILE__) #chemin du fichier gossip.csv
+    CSV.open(file, "a+") do |new_row| #a+: ajoute une ligne (row)
+        new_row << [@author, @content] #  chaque nouvelle ligne, on affiche auteur puis content
+    end
+    #ou avec JSON : def save_gossip
+    #File.open("gossip.json","a+") do |f|
+    #      f.write(@gossip_array.to_json)
+    #end
   end
 
+  def self.all
+    all_gossips = [] # 1)création d'un array vide qui s'appelle all_gossips
+
+    # 2)chaque ligne de ton CSV.each do |ligne|
+      # 2-a) gossip_provisoire = Gossip.new(paramètres de la ligne) - permet de créer un objet gossip
+      # 2-b) all_gossips << gossip_provisoire - permet de rajouter le gossip provisoire au array
+    # end
+
+    return all_gossips # 3)return all_gossips - on renvoie le résultat
+  end
 
 end
 

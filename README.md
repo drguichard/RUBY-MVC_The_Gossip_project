@@ -1,5 +1,8 @@
 # The hacking gossip ruby version POO
 
+Application qui s'appelle The Gossip Project, où l'utilisateur pourra rentrer les ragots et rumeur, afficher une liste des potins, puis supprimer ceux qui ne sont plus d'actualité.
+Les vues seront affichées dans le terminal, les potins enregistrés en CSV, et le programme tournera jusqu'à ce que l'utilisateur le quitte.
+
 1. Installation guide:
 * launch your Terminal
 * go to the root folder of the game : "the_hacking_gossip_ruby_version_POO"
